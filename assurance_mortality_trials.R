@@ -27,6 +27,7 @@ df <- data_bja %>%
 
 
 # Use uniform prior, 10'000 simulation for each choice of prior sample from the uniform prior
+# the prior has 100 equally spaced values, resulting in 1'000'000 trial simulations overall 
 
 n.sim = 1e4
 df.ap      <- data.frame()
@@ -42,7 +43,6 @@ for (study in 1:nrow(df)){
     mean.success = rep(NA,length(myrange))
     n = 1
     for (myr in myrange){
-      # now run 1000 trials
       rm(trial.p.control,trial.p.treatment)
       trial.p.control   = rbinom(n.sim,size=round(df$N[study]/2),prob=pcontrol)
       trial.p.treatment = rbinom(n.sim,size=round(df$N[study]/2),prob=myr)
@@ -79,7 +79,6 @@ for (study in 1:nrow(df.example)){
   mean.success = rep(NA,length(myrange))
   n = 1
   for (myr in myrange){
-    # now run 1000 trials
     rm(trial.p.control,trial.p.treatment)
     trial.p.control   = rbinom(n.sim,size=round(df.example$N[study]/2),prob=pcontrol)
     trial.p.treatment = rbinom(n.sim,size=round(df.example$N[study]/2),prob=myr)
