@@ -27,7 +27,7 @@ df <- data_bja %>%
 
 
 # Use uniform prior, 10'000 simulation for each choice of prior sample from the uniform prior
-# the prior has 100 equally spaced values, resulting in 1'000'000 trial simulations overall 
+# the prior has 100 equally spaced values, resulting in 1'000'000 trial simulations overall (for each study)
 
 n.sim = 1e4
 df.ap      <- data.frame()
