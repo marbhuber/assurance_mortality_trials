@@ -1,2 +1,1 @@
-# assurance_mortality_trials
-Analysis of mortality RCTs
+Conditional versus expected power in trial design: the concept of assurance illustrated in mortality trials
